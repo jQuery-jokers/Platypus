@@ -5,7 +5,7 @@ API key: 5f85c22574885841bbfba356797e761e3eb053f86b7709753507c26d3549b150
 
 
 # Sherpa:
-API Docs: apidocsv2.joinsherpa.com 
+<a href="apidocsv2.joinsherpa.com">API Docs</a>
 
 Here are the credentials for the API:
 {
