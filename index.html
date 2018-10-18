@@ -32,19 +32,23 @@
     <div class="container">
         <h1 class="text-center">Platypus</h1>
 
-        <div class="form">
+        <form class="ui massive form" id="searchForm">
+
             <div class="field">
+                <label id="labelquestion">Where are you going?</label>
                 <div class="ui icon input">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Brazil">
                     <i class="search link icon"></i>
                 </div>
             </div>
-        </div>
+        </form>
+        <div class="ui hidden divider"></div>
+
     </div>
 
-    
+
     <div class="container">
-            <div class="ui divider"></div>
+        <div class="ui divider"></div>
         <div class="ui styled accordion">
             <div class="title">
                 <i class="dropdown icon"></i>
@@ -77,9 +81,15 @@
         </div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-<script>$('.ui.accordion').accordion();</script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <script>
+
+        $('.ui.accordion').accordion();
+
+        $('.platypus').transition('fade left');
+    </script>
+
 </body>
 
 
