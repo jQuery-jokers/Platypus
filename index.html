@@ -33,13 +33,22 @@
         <h1 class="text-center">Platypus</h1>
 
         <form class="ui massive form" id="searchForm">
-
-            <div class="field">
-                <label id="labelquestion">Where are you going?</label>
-                <div class="ui icon input">
-                    <input type="text" placeholder="Brazil">
-                    <i class="search link icon"></i>
+            <div class="two fields">
+                <div class="field">
+                    <label id="labelquestion">Nationality</label>
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Jamaica">
+                        <i class="search link icon"></i>
+                    </div>
                 </div>
+                <div class="field">
+                    <label id="labelquestion">Where are you going?</label>
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Brazil">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+
             </div>
         </form>
         <div class="ui hidden divider"></div>
@@ -55,7 +64,7 @@
                 Visa
             </div>
             <div class="content">
-                <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and
+                <p class="transition hidden" id="visa">A dog is a type of domesticated animal. Known for its loyalty and
                     faithfulness, it can be found as a welcome guest in many households across the world.</p>
             </div>
             <div class="title">
@@ -63,7 +72,7 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" style="display: block !important;">There are many breeds of dogs. Each
+                <p class="transition visible" id="vaccination" style="display: block !important;">There are many breeds of dogs. Each
                     breed varies in size and temperament. Owners often select a breed of dog that they find to be
                     compatible with their own lifestyle and desires from a companion.</p>
             </div>
@@ -72,7 +81,7 @@
                 Length of Stay
             </div>
             <div class="content">
-                <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or
+                <p id="lengthofstay">Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or
                     shelters.</p>
                 <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you
                     to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding

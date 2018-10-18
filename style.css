@@ -16,6 +16,7 @@ h1, .form {
 
 h1 {
     font-size: 5em;
+    margin-bottom: .7em;
 }
 
 #searchForm {
