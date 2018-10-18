@@ -22,12 +22,12 @@ var countries = {
 };
 
 
-$(".btn").click(function (e) {
+$("#btn").click(function (e) {
     e.preventDefault();
     $.ajax(countries).done(function (response) {
         console.log(response)
-        var destination = $("#destination-box").val().trim();
-        var citizenship = $("#citizenship-box").val().trim();
+        var destination = $("#usercountry").val().trim();
+        var citizenship = $("#usercitizenship").val().trim();
         for (i = 0; i < response.length; i++) {
             if (destination === response[i].country_name) {
                 var destinationID = response[i].country_ID;
