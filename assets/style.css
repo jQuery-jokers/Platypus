@@ -42,3 +42,7 @@ h1 {
 .form {
     margin-bottom: 3em;
 }
+
+#platypus {
+    float: right;
+}
