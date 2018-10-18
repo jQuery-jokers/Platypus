@@ -1,3 +1,16 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyA9jAm-HuuHLf_ZWTrIlm0jtC39FjId2Sk",
+    authDomain: "platypus-app.firebaseapp.com",
+    databaseURL: "https://platypus-app.firebaseio.com",
+    projectId: "platypus-app",
+    storageBucket: "platypus-app.appspot.com",
+    messagingSenderId: "189178348359"
+  };
+  firebase.initializeApp(config);
+
+
+//Create variable for countries objects
 var countries = {
     "async": true,
     "crossDomain": true,
@@ -35,9 +48,14 @@ $(".btn").click(function (e) {
             }
           };
 
-        $.ajax(visaRequirements).done(function (response) {
-            console.log(response);
-        })
+          $.ajax(visaRequirements).done(function (response) {
+            console.log(response)
+            console.log((response[0].textual.text[0])),(response[0].textual.text[1]), (response[0].textual.text[2]);
+            var visaDiv = $("#visa");
+            visaDiv.text(response[0].textual.text[0])
+
+          })
+        
 
 
 
