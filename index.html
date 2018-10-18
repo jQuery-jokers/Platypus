@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Platypus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
+
+    <link rel="stylesheet" href="assets/style.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="ui secondary menu">
+            <button class="ui inverted basic button">Home</button>
+            <!-- <a class="active item">Home</a> -->
+            <div class="right menu">
+                <button class="ui inverted basic button">Sign-Up</button>
+                <a class="ui item">Login</a>
+                <a class="ui item">About</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+        <h1 class="text-center">Platypus</h1>
+
+        <form class="ui massive form" id="searchForm">
+            <div class="two fields">
+                <div class="field">
+                    <label id="labelquestion">Citizenship</label>
+                    <div class="ui icon input">
+                        <input id="usercitizenship" type="text" placeholder="Jamaica">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label id="labelquestion">Where are you going?</label>
+                    <div class="ui icon input">
+                        <input id="usercountry" type="text" placeholder="Brazil">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+                <button class="ui basic massive button" id="btn">Submit</button>
+            </div>
+        </form>
+        <div class="ui hidden divider"></div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="ui divider"></div>
+        <div class="ui styled accordion">
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Visa
+            </div>
+            <div class="content">
+                <p class="transition hidden" id="visa">A dog is a type of domesticated animal. Known for its loyalty and
+                    faithfulness, it can be found as a welcome guest in many households across the world.</p>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Vaccinations
+            </div>
+            <div class="content">
+                <p class="transition visible" id="vaccination" style="display: block !important;">There are many breeds of dogs. Each
+                    breed varies in size and temperament. Owners often select a breed of dog that they find to be
+                    compatible with their own lifestyle and desires from a companion.</p>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Length of Stay
+            </div>
+            <div class="content">
+                <p id="lengthofstay">Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or
+                    shelters.</p>
+                <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you
+                    to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding
+                    your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+            </div>
+        </div>
+        <img src="assets/images/platypus-head.svg" id="platypus">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+
+        $('.ui.accordion').accordion();
+
+        $('.platypus').transition('fade left');
+    </script>
+
+</body>
+
+
+</html>

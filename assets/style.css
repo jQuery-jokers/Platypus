@@ -1,0 +1,54 @@
+header {
+    padding: 1em 3em 1em 3em;
+    background-color: lightblue;
+    margin-bottom: 2em;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+   
+}
+
+h1, .form {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: .7em;
+}
+
+#searchForm {
+    width: 60%;
+    margin: auto;
+}
+
+#labelquestion {
+    padding: auto;
+    font-size: 1.10em;
+    margin-bottom: 1em;
+}
+
+#btn {
+    margin-top: 1.85em;
+    height: 2.7em;
+    /* color: lightblue; */
+}
+
+.accordion {
+    margin: auto;
+    font-size: 2em;
+}
+
+.divider {
+    padding: 1em;
+}
+
+.form {
+    margin-bottom: 3em;
+}
+
+#platypus {
+    float: right;
+}
