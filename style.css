@@ -1,0 +1,14 @@
+header {
+    padding: 1em 3em 1em 3em;
+    background-color: lightblue;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+   
+}
+
+h1, .form {
+    text-align: center;
+}
