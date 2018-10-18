@@ -30,6 +30,12 @@ h1 {
     margin-bottom: 1em;
 }
 
+#submit {
+    margin-top: 1.85em;
+    height: 2.7em;
+    /* color: lightblue; */
+}
+
 .accordion {
     margin: auto;
     font-size: 2em;
