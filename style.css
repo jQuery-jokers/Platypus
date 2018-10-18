@@ -12,3 +12,15 @@ header {
 h1, .form {
     text-align: center;
 }
+
+.accordion {
+    margin: auto;
+}
+
+.divider {
+    padding: 1em;
+}
+
+.form {
+    margin-bottom: 3em;
+}
