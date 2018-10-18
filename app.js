@@ -1,13 +1,13 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyA9jAm-HuuHLf_ZWTrIlm0jtC39FjId2Sk",
-    authDomain: "platypus-app.firebaseapp.com",
-    databaseURL: "https://platypus-app.firebaseio.com",
-    projectId: "platypus-app",
-    storageBucket: "platypus-app.appspot.com",
-    messagingSenderId: "189178348359"
-  };
-  firebase.initializeApp(config);
+// var config = {
+//     apiKey: "AIzaSyA9jAm-HuuHLf_ZWTrIlm0jtC39FjId2Sk",
+//     authDomain: "platypus-app.firebaseapp.com",
+//     databaseURL: "https://platypus-app.firebaseio.com",
+//     projectId: "platypus-app",
+//     storageBucket: "platypus-app.appspot.com",
+//     messagingSenderId: "189178348359"
+//   };
+//   firebase.initializeApp(config);
 
 
 //Create variable for countries objects
@@ -22,12 +22,12 @@ var countries = {
 };
 
 
-$(".btn").click(function (e) {
+$("#btn").click(function (e) {
     e.preventDefault();
     $.ajax(countries).done(function (response) {
         console.log(response)
-        var destination = $("#destination-box").val().trim();
-        var citizenship = $("#citizenship-box").val().trim();
+        var destination = $("#usercountry").val().trim();
+        var citizenship = $("#usercitizenship").val().trim();
         for (i = 0; i < response.length; i++) {
             if (destination === response[i].country_name) {
                 var destinationID = response[i].country_ID;
