@@ -1,13 +1,13 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyA9jAm-HuuHLf_ZWTrIlm0jtC39FjId2Sk",
-    authDomain: "platypus-app.firebaseapp.com",
-    databaseURL: "https://platypus-app.firebaseio.com",
-    projectId: "platypus-app",
-    storageBucket: "platypus-app.appspot.com",
-    messagingSenderId: "189178348359"
-  };
-  firebase.initializeApp(config);
+// var config = {
+//     apiKey: "AIzaSyA9jAm-HuuHLf_ZWTrIlm0jtC39FjId2Sk",
+//     authDomain: "platypus-app.firebaseapp.com",
+//     databaseURL: "https://platypus-app.firebaseio.com",
+//     projectId: "platypus-app",
+//     storageBucket: "platypus-app.appspot.com",
+//     messagingSenderId: "189178348359"
+//   };
+//   firebase.initializeApp(config);
 
 
 //Create variable for countries objects
