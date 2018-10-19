@@ -24,6 +24,10 @@ h1 {
     margin-bottom: .7em;
 }
 
+#divider {
+    border-top-color: #FFAA39;
+}
+
 #searchForm {
     width: 60%;
     margin: auto;
