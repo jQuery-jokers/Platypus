@@ -99,7 +99,18 @@
 
         $('.ui.accordion').accordion();
 
-        $('.platypus').transition('fade left');
+        // $('#platypus').transition('giggle');
+
+        $('#platypus')
+            .transition({
+                animation: 'jiggle',
+                duration: '2s',
+                onComplete: function () {
+                    // alert('done');
+                }
+            })
+            ;
+
     </script>
 
 </body>
