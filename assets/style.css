@@ -1,77 +1,82 @@
 header {
-    padding: 1em 3em 1em 3em;
-    background-color: #d7f4fa;
-    margin-bottom: 2em;
+  padding: 1em 3em 1em 3em;
+  background-color: #d7f4fa;
+  margin-bottom: 2em;
 }
 
 #title {
-  color:#FECC67;
-  font-family: 'Baloo', cursive;
+  color: #fecc67;
+  font-family: "Baloo", cursive;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-   
+  width: 80%;
+  margin: auto;
 }
 
-h1, .form {
-    text-align: center;
+h1,
+.form {
+  text-align: center;
 }
 
 h1 {
-    font-size: 5em;
-    margin-bottom: .7em;
+  font-size: 5em;
+  margin-bottom: 0.7em;
 }
 
-#divider {
-    border-top-color: #FFAA39;
+#topDivider {
+  border-top-color: #ffaa39;
 }
 
 #searchForm {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 }
 
 #labelquestion {
-    padding: auto;
-    font-size: 1.10em;
-    margin-bottom: 1em;
-    
+  padding: auto;
+  font-size: 1.1em;
+  margin-bottom: 1em;
 }
 
 #btn {
-    margin-top: 1.85em;
-    height: 2.7em;
-    background-color:#FECC67;;
-    font-family: 'Baloo', cursive;
+  margin-top: 1.85em;
+  height: 2.7em;
+  background-color: #fecc67;
+  font-family: "Baloo", cursive;
 }
 
 .accordion {
-    margin: auto;
-    font-size: 2em;
+  margin: auto;
+  font-size: 2em;
 }
 
 .divider {
-    padding: 1em;
+  padding: 1em;
 }
 
 .form {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 #platypus {
-    float: right;
+  float: right;
 }
 
 footer {
-    padding: 30px 0;
-    clear: both;
-    font-size: 12px;
-    color: #fff;
-    color: #ccc;
-    text-align: center;
-    background: #666;
-    border-top: 8px solid #d7f4fa;
-    height: 50px;
-  }
+  padding: 10px 0;
+  clear: both;
+  font-size: 16px;
+  color: grey;
+  /* color: #ccc; */
+  text-align: center;
+  /* border-top: 6px solid #d7f4fa; */
+  height: 50px;
+  position: relative;
+}
+
+#bottomDivider {
+border-top: 0px;
+  border-bottom-color: #ffaa39;
+  margin-top: 40em;
+}

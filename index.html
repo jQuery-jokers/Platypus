@@ -22,10 +22,31 @@
             <button class="ui inverted secondary button" id="homebutton">Home</button>
             <!-- <a class="active item">Home</a> -->
             <div class="right menu">
-                <button class="ui inverted secondary button">Sign-Up</button>
-                <a class="ui item">Login</a>
-                <a class="ui item">About</a>
+                <button class="ui inverted secondary button" id="sign-up-btn">
+                    <div class="ui modal form" id="popup-form">
+                        <div class="ui large form" id="sign-up-popup">
+                            <div class=" field ">
+                                <label>First Name</label>
+                                <input type="text " name="first-name " placeholder="First Name ">
+                            </div>
+                            <div class="field ">
+                                <label>Last Name</label>
+                                <input type="text " name="last-name " placeholder="Last Name ">
+                            </div>
+                            <div class="field ">
+                                <div class="ui checkbox ">
+                                    <input type="checkbox " tabindex="0 " class="hidden ">
+                                    <label>I agree to the Terms and Conditions</label>
+                                </div>
+                            </div>
+                            <div class="ui large submit button">Create</div>
+                        </div>
+                    </div>Sign-Up
             </div>
+            </button>
+            <a class="ui item ">Login</a>
+            <a class="ui item ">About</a>
+        </div>
 
         </div>
 
@@ -53,13 +74,13 @@
                 <button class="ui massive button" id="btn">Submit</button>
             </div>
         </form>
-        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider" id="hiddenDivider"></div>
 
     </div>
 
 
     <div class="container">
-        <div class="ui divider" id="divider"></div>
+        <div class="ui divider" id="topDivider"></div>
         <div class="ui styled accordion">
             <div class="title">
                 <i class="dropdown icon"></i>
@@ -91,9 +112,13 @@
         <img src="assets/images/platypus-head.svg" id="platypus">
     </div>
 
+    <div class="container">
+        <div class="ui divider" id="bottomDivider"></div>
+    </div>
+
     <footer>
         <div class="container">
-            Copyright &copy;
+            Copyright &copy; 2018
         </div>
     </footer>
 
@@ -115,6 +140,15 @@
                 }
             })
             ;
+
+        $(function () {
+            $("#sign-up-btn").click(function () {
+                $("#popup-form").modal('show');
+            });
+            $("#popup-form").modal({
+                closable: true
+            });
+        });
 
     </script>
 
