@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Platypus</title>
+    <!-- Link Semantic CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
-
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 
 
@@ -17,7 +19,7 @@
 
     <header>
         <div class="ui secondary menu">
-            <button class="ui inverted secondary button">Home</button>
+            <button class="ui inverted secondary button" id="homebutton">Home</button>
             <!-- <a class="active item">Home</a> -->
             <div class="right menu">
                 <button class="ui inverted secondary button">Sign-Up</button>
@@ -30,7 +32,7 @@
     </header>
 
     <div class="container">
-        <h1 class="text-center">Platypus</h1>
+        <h1 class="text-center" id="title">PLATYPUS</h1>
 
         <form class="ui massive form" id="searchForm">
             <div class="two fields">
@@ -48,7 +50,7 @@
                         <i class="plane icon"></i>
                     </div>
                 </div>
-                <button class="ui yellow massive button" id="btn">Submit</button>
+                <button class="ui massive button" id="btn">Submit</button>
             </div>
         </form>
         <div class="ui hidden divider"></div>
@@ -65,18 +67,16 @@
             </div>
             <div class="content">
                 <p class="transition hidden" id="visa">Where are you traveling to?
-                    <br><br>
-                    Learn that country's visa requirements by using our search function above.</p>
+                    <br><br> Learn that country's visa requirements by using our search function above.</p>
             </div>
             <div class="title">
                 <i class="dropdown icon"></i>
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
-                    you're traveling to have vaccination requirements?
-                    <br><br>
-                    Find out by using our search function above.</p>
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
+                    traveling to have vaccination requirements?
+                    <br><br> Find out by using our search function above.</p>
             </div>
             <div class="title">
                 <i class="dropdown icon"></i>
@@ -84,9 +84,7 @@
             </div>
             <div class="content">
                 <p id="lengthofstay">How many days can I visit a country for?
-                    <br><br>
-                    Use our search function above and
-                    find out!</p>
+                    <br><br> Use our search function above and find out!</p>
             </div>
         </div>
         <img src="assets/images/platypus-head.svg" id="platypus">

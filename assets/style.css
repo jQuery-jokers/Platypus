@@ -1,7 +1,12 @@
 header {
     padding: 1em 3em 1em 3em;
-    background-color: lightblue;
+    background-color: #d7f4fa;
     margin-bottom: 2em;
+}
+
+#title {
+  color:#FECC67;
+  font-family: 'Baloo', cursive;
 }
 
 .container {
@@ -28,12 +33,14 @@ h1 {
     padding: auto;
     font-size: 1.10em;
     margin-bottom: 1em;
+    
 }
 
 #btn {
     margin-top: 1.85em;
     height: 2.7em;
-    /* color: lightblue; */
+    background-color:#FECC67;;
+    font-family: 'Baloo', cursive;
 }
 
 .accordion {
