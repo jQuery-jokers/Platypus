@@ -64,18 +64,19 @@
                 <div class="field">
                     <label id="labelquestion">Citizenship</label>
                     <div class="ui icon input">
-                        <input id="usercitizenship" type="text" placeholder="Jamaica">
+                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Jamaica">
                         <i class="globe icon"></i>
                     </div>
                 </div>
                 <div class="field">
                     <label id="labelquestion">Destination</label>
                     <div class="ui icon input">
-                        <input id="usercountry" type="text" placeholder="Brazil">
+                        <input name="destination" id="usercountry" type="text" placeholder="Brazil">
                         <i class="plane icon"></i>
                     </div>
                 </div>
                 <button class="ui massive button" id="btn">Submit</button>
+                <!-- <div class="ui error message"></div> -->
             </div>
         </form>
         <div class="ui hidden divider" id="hiddenDivider"></div>
@@ -152,6 +153,34 @@
                 closable: true
             });
         });
+
+        // $("#btn").click(function () {
+            $('#searchForm')
+                .form({
+                    on: 'blur',
+                    inline: true,
+                    fields: {
+                        citizenship: {
+                            identifier: 'citizenship',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter the country in which you have citizenship',
+                                }
+                            ]
+                        },
+                        destination: {
+                            identifier: 'destination',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your destination'
+                                }
+                            ]
+                        },
+                    }
+                });
+        // })
 
     </script>
 
