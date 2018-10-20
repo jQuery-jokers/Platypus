@@ -19,28 +19,32 @@
 
     <header>
         <div class="ui secondary menu">
-            <button class="ui inverted secondary button" id="homebutton">Home</button>
+            <a href="index.html">
+                <img class="ui circular image" src="assets/images/platypus-head 64px.png">
+            </a>
+            <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
             <!-- <a class="active item">Home</a> -->
             <div class="right menu">
                 <button class="ui inverted secondary button" id="sign-up-btn">
                     <div class="ui modal form" id="popup-form">
-                        <div class="ui large form" id="sign-up-popup">
-                            <div class=" field ">
-                                <label>First Name</label>
-                                <input type="text " name="first-name " placeholder="First Name ">
+                        <form class="ui big form" id="sign-up-popup">
+                            <h2 class="ui dividing header" id="user-sign-up-title">User Sign-Up</h2>
+                            <div class="field">
+                                <label id="pop-up-label">User Name</label>
+                                <input id="popup-input" type="text " name="username" placeholder="jokers1234">
                             </div>
                             <div class="field ">
-                                <label>Last Name</label>
-                                <input type="text " name="last-name " placeholder="Last Name ">
+                                <label id="pop-up-label">Password</label>
+                                <input id="popup-input" type="text " name="password" placeholder="honeybooboo">
                             </div>
                             <div class="field ">
                                 <div class="ui checkbox ">
-                                    <input type="checkbox " tabindex="0 " class="hidden ">
+
                                     <label>I agree to the Terms and Conditions</label>
                                 </div>
                             </div>
                             <div class="ui large submit button">Create</div>
-                        </div>
+                        </form>
                     </div>Sign-Up
             </div>
             </button>
@@ -95,8 +99,7 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
-                    you're
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
                     traveling to have vaccination requirements?
                     <br><br> Find out by using our search function above.</p>
             </div>

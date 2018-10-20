@@ -1,82 +1,104 @@
 header {
-  padding: 1em 3em 1em 3em;
-  background-color: #d7f4fa;
-  margin-bottom: 2em;
-}
-
-#title {
-  color: #fecc67;
-  font-family: "Baloo", cursive;
-}
-
-.container {
-  width: 80%;
-  margin: auto;
-}
-
-h1,
-.form {
-  text-align: center;
-}
-
-h1 {
-  font-size: 5em;
-  margin-bottom: 0.7em;
-}
-
-#topDivider {
-  border-top-color: #ffaa39;
-}
-
-#searchForm {
-  width: 60%;
-  margin: auto;
-}
-
-#labelquestion {
-  padding: auto;
-  font-size: 1.1em;
-  margin-bottom: 1em;
-}
-
-#btn {
-  margin-top: 1.85em;
-  height: 2.7em;
-  background-color: #fecc67;
-  font-family: "Baloo", cursive;
-}
-
-.accordion {
-  margin: auto;
-  font-size: 2em;
-}
-
-.divider {
-  padding: 1em;
-}
-
-.form {
-  margin-bottom: 3em;
-}
-
-#platypus {
-  float: right;
-}
-
-footer {
-  padding: 10px 0;
-  clear: both;
-  font-size: 16px;
-  color: grey;
-  /* color: #ccc; */
-  text-align: center;
-  /* border-top: 6px solid #d7f4fa; */
-  height: 50px;
-  position: relative;
-}
-
-#bottomDivider {
-border-top: 0px;
-  border-bottom-color: #ffaa39;
-  margin-top: 40em;
-}
+    padding: 1em 3em 1em 3em;
+    background-color: #d7f4fa;
+    margin-bottom: 2em;
+  }
+  
+  #sign-up-btn {
+      font-family: "Baloo", cursive;
+  }
+  
+  #user-sign-up-title {
+    padding: 1em;
+    background-color: #fecc67;
+    color: white;
+  }
+  
+  #pop-up-label {
+      padding: .5em;
+  }
+  #popup-input {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    padding: 1em;
+    font-size: 1em;
+    border-color: (34, 36, 38, 0.15);
+    border-radius: .5em;
+  }
+  
+  #title {
+    color: #fecc67;
+    font-family: "Baloo", cursive;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  h1,
+  .form {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 5em;
+    margin-bottom: 0.7em;
+  }
+  
+  #topDivider {
+    border-top-color: #ffaa39;
+  }
+  
+  #searchForm {
+    width: 60%;
+    margin: auto;
+  }
+  
+  #labelquestion {
+    padding: auto;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+  
+  #btn {
+    margin-top: 1.85em;
+    height: 2.7em;
+    background-color: #fecc67;
+    font-family: "Baloo", cursive;
+  }
+  
+  .accordion {
+    margin: auto;
+    font-size: 2em;
+  }
+  
+  .divider {
+    padding: 1em;
+  }
+  
+  .form {
+    margin-bottom: 3em;
+  }
+  
+  #platypus {
+    float: right;
+  }
+  
+  footer {
+    padding: 10px 0;
+    clear: both;
+    font-size: 16px;
+    color: grey;
+    /* color: #ccc; */
+    text-align: center;
+    /* border-top: 6px solid #d7f4fa; */
+    height: 50px;
+    position: relative;
+  }
+  
+  #bottomDivider {
+    border-top: 0px;
+    border-bottom-color: #ffaa39;
+    margin-top: 40em;
+  }
+  
