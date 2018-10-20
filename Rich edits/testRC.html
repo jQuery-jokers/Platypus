@@ -5,34 +5,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <title>Platypus</title>
+    <!-- Link Semantic CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+
+
 </head>
 
 <body>
 
-    <h1>Welcome to Platypus, melonfarmers.</h1>
+    <header>
+        <div class="ui secondary menu">
+            <a href="index.html">
+                <img class="ui circular image" src="../assets/images/platypus-head 64px.png">
+            </a>
+            <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
+            <!-- <a class="active item">Home</a> -->
+            <div class="right menu">
+                <button class="ui inverted secondary button" id="sign-up-btn">
+                    <div class="ui modal form" id="popup-form">
+                        <form class="ui big form" id="sign-up-popup">
+                            <h2 class="ui dividing header" id="user-sign-up-title">User Sign-Up</h2>
+                            <div class="field">
+                                <label id="pop-up-label">User Name</label>
+                                <input id="popup-input" type="text " name="username" placeholder="jokers1234">
+                            </div>
+                            <div class="field ">
+                                <label id="pop-up-label">Password</label>
+                                <input id="popup-input" type="text " name="password" placeholder="honeybooboo">
+                            </div>
+                            <div class="field ">
+                                <div class="ui checkbox ">
+
+                                    <label>I agree to the Terms and Conditions</label>
+                                </div>
+                            </div>
+                            <div class="ui large submit button">Create</div>
+                        </form>
+                    </div>Sign-Up
+            </div>
+            </button>
+            <a class="ui item ">Login</a>
+            <a class="ui item ">About</a>
+        </div>
+
+        </div>
+
+    </header>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-            <textarea name="" id="citizenship-box" cols="50" rows="1" placeholder="Where you from, punk?"></textarea>
-            <textarea name="" id="destination-box" cols="50" rows="1" placeholder="Where you wanna go, punk?"></textarea>
-            <div class="btn btn-primary">Submit</div>
-        </div>
-        <div class="col-md-3"></div>
-        </div>
-        <div class="country-list-here">
+        <h1 class="text-center" id="title">PLATYPUS</h1>
 
-        </div>
+        <form class="ui massive form" id="searchForm">
+            <div class="two fields">
+                <div class="field">
+                    <label id="labelquestion">Citizenship</label>
+                    <div class="ui icon input">
+                        <input id="usercitizenship" type="text" value="United States">
+                        <i class="globe icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label id="labelquestion">Destination</label>
+                    <div class="ui icon input">
+                        <input id="usercountry" type="text" value="Brazil">
+                        <i class="plane icon"></i>
+                    </div>
+                </div>
+                <button class="ui massive button" id="btn">Submit</button>
+            </div>
+        </form>
+        <div class="ui hidden divider" id="hiddenDivider"></div>
+
     </div>
 
 
+    <div class="container">
+        <div class="ui divider" id="topDivider"></div>
+        <div class="ui styled accordion">
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Visa
+            </div>
+            <div class="content">
+                <p class="transition hidden" id="visa">Where are you traveling to?
+                    <br><br> Learn that country's visa requirements by using our search function above.</p>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Vaccinations
+            </div>
+            <div class="content">
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
+                    traveling to have vaccination requirements?
+                    <br><br> Find out by using our search function above.</p>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Length of Stay
+            </div>
+            <div class="content">
+                <p id="lengthofstay">How many days can I visit a country for?
+                    <br><br> Use our search function above and find out!</p>
+            </div>
+            <div class="title">
+                    <i class="dropdown icon"></i>
+                    Currency
+                </div>
+                <div class="content">
+                    <p id="currency">When do I need to declare money? How much money will I have?
+                        <br><br> Use our search function above and find out!</p>
+                </div>
+        </div>
+        <img src="../assets/images/platypus-head.svg" id="platypus">
+    </div>
 
-    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='crossorigin='anonymous'></script>
+    <div class="container">
+        <div class="ui divider" id="bottomDivider"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            Copyright &copy; 2018
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
     <script src="./testapp.js"></script>
+    <script>
+
+        $('.ui.accordion').accordion();
+
+        // $('#platypus').transition('giggle');
+
+        $('#platypus')
+            .transition({
+                animation: 'jiggle',
+                duration: '2s',
+                onComplete: function () {
+                    // alert('done');
+                }
+            })
+            ;
+
+        $(function () {
+            $("#sign-up-btn").click(function () {
+                $("#popup-form").modal('show');
+            });
+            $("#popup-form").modal({
+                closable: true
+            });
+        });
+
+    </script>
+
 </body>
+
 
 </html>
