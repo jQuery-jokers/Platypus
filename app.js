@@ -68,39 +68,62 @@ $("#btn").click(function (e) {
 
             //Write Visa info to visa div
             var visaDiv = $("#visa");
-            newP.html("-- " + response.visa[0].textual.text[0] + "<br> -- " + response.visa[0].textual.text[1] + "<br>-- " +
-                response.visa[0].textual.text[2]);
+            newP.html(response.visa[0].textual.text[0] + " " + response.visa[0].textual.text[1] + " " + response.visa[0].textual.text[2]);
             visaDiv.append(newP);
+            if (response.visa[0].notes) {
+                var notesP = $("<p>");
+                notesP.html("Additional information: " + response.visa[0].notes);
+                visaDiv.append(notesP);
+            }
             // visaDiv.text(response.visa[0].type)
 
 
 
             //Write vaccination info to vax div
             var vaxDiv = $("#vaccination");
-            // console.log(response.includes(response.vaccination.recommended));
-            var diseaseList = [];
-            for (i = 0; i < response.vaccination.risk.length; i++) {
-                var disease = response.vaccination.risk[i].type.toLowerCase().replace("_", " ");
-                diseaseList.push(disease);
+            var riskDiseaseList = [];
+            var recDiseaseList = [];
+
+            if (response.vaccination.risk) {
+                for (i = 0; i < response.vaccination.risk.length; i++) {
+                    var riskDisease = response.vaccination.risk[i].type.toLowerCase().replace("_", " ");
+                    riskDiseaseList.push(riskDisease);
+
+                }
             }
 
-            if (diseaseList !== undefined, null) {
-                vaxDiv.html("Before traveling, talk to your doctor about vaccinations against " + diseaseList + ".");
-            } else if (!diseaseList) {
-                vaxDiv.text("No recommended vaccinations!");
+            if (response.vaccination.recommended) {
+                for (i = 0; i < response.vaccination.recommended.length; i++) {
+                    var recDisease = response.vaccination.recommended[i].type.toLowerCase().replace("_", " ");
+                    recDiseaseList.push(recDisease);
+                }
+            }
+
+
+
+            if (!response.vaccination.recommended && !response.vaccination.risk) {
+                vaxDiv.text("No recommended vaccinations!")
             } else {
-                vaxDiv.text("No recommended vaccinations!");
+                vaxDiv.html("Before traveling, talk to your doctor about vaccinations against " + recDiseaseList + ", " + riskDiseaseList + ".");;
             }
 
 
             //Write length of stay info to length div
             var lengthDiv = $("#lengthofstay");
+            var allowedStay = response.visa[0].allowed_stay;
+            if (!allowedStay){
+                lengthDiv.text("No special requirements!");
+            }
+            lengthDiv.text("You can stay for " + allowedStay);
+
+
+
+
+
+
             var currencyDiv = $("#currency");
             var newCurrencyP = $("<p>");
-            var allowedStay = response.visa[0].allowed_stay;
-            var notesStay = response.visa[0].notes[0];
-            lengthDiv.text(allowedStay, notesStay);
-            newCurrencyP.html("When you arrive and leave: " + response.currency.arrival)
+            newCurrencyP.html("Declaration thresholds: " + response.currency.arrival)
             currencyDiv.prepend(newCurrencyP);
         })
 
