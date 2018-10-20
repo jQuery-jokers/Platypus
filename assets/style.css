@@ -102,6 +102,13 @@ footer {
   margin-top: 40em;
 }
 
+
+/* travel-list page */
+#addButton {
+    margin-left: 12em;
+}
+
+
 /* About page */
 
 #contact-form ul {
@@ -138,7 +145,6 @@ textarea {
     float: left;
     width: 200px;
     height: auto;
-    margin-top: 10px;
     margin-right: 25px;
   }
 
