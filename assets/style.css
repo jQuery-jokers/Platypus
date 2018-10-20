@@ -112,15 +112,16 @@ footer {
   margin-bottom: 10px;
 }
 
-label,
-input[type="text"],
+#contact,
+#name,
 input[type="email"],
 textarea {
   display: block;
   width: 100%;
 }
 
-input[type="text"],
+
+#name,
 input[type="email"],
 textarea {
   height: 35px;
