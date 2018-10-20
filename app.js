@@ -41,7 +41,7 @@ $("#btn").click(function (e) {
         var visaRequirements = {
             "async": true,
             "crossDomain": true,
-            "url": "https://api.joinsherpa.com/v2/visa-requirements/" + citizenshipID + "-" + destinationID,
+            "url": "https://api.joinsherpa.com/v2/entry-requirements/" + citizenshipID + "-" + destinationID,
             "method": "GET",
             "headers": {
                "Authorization": "Basic Zk5saHhmUTB1cm94YVhvQ1NuOUY2a0V3clFjQWN6OmtSaWFQTWhxTU5GbzdtMDVDbHY5S3IzVVBaNXNjWWg2TnJCaVZkTjQ="
@@ -49,16 +49,23 @@ $("#btn").click(function (e) {
           };
 
           $.ajax(visaRequirements).done(function (response) {
+            
+            //Console log to display paths
             console.log(response)
-            console.log((response[0].textual.text[0])),(response[0].textual.text[1]), (response[0].textual.text[2]);
+            
+            //Write Visa info to visa div
             var visaDiv = $("#visa");
-            visaDiv.text(response[0].textual.text[0])
+            visaDiv.text(response.visa[0].type)
+
+            //Write vaccination info to vax div
+            var vaxDiv = $("#vaccination");
+            vaxDiv.text(response.vaccination.recommended[0].type)
+
+            //Write length of stay info to length div
+            var lengthDiv = $("#lengthofstay");
+            lengthDiv.text(response.visa[0].notes[0])
 
           })
-        
-
-
-
     })
 });
 
