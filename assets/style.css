@@ -144,11 +144,11 @@ textarea {
  /* main */
   
  #main-container {
-     
+
   }
   
   .main-section {
-    float: left;
+    /* float: left; */
     width: 100%;
     max-width: 960px;
     padding: 30px;
@@ -156,3 +156,12 @@ textarea {
     background: #fff;
     border: 1px solid #ddd;
   }
+
+
+/* cards */
+
+div.relative {
+    position: relative;
+    left: 40em; 
+    /* float:right; */
+}

@@ -53,121 +53,157 @@
 
     </header>
 
-    <div id="main-container" class="container">
-        <section class="main-section">
-            <h2 class="text-center" id="title">About</h2>
+    <div class="ui grid">
 
-            <img src="assets/images/platypus-head.svg" class="auth-image" alt="Platypus">
+        <div class="two wide column"></div>
 
-            <p>An international travel app that is a one-stop source for important information and steps you need to
-                travel abroad. This app will let you input a destination and immediately get information on type of
-                visa needed, immunizations needed, and other requirements for travel. Registered users can then save
-                this information as a checklist and add custom tasks.</p>
+        <div class="twelve wide column">
+            <div id="main-container" class="container">
+                <section class="main-section">
+                    <h2 class="text-center" id="title">About</h2>
 
-            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-                    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-                    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <img src="assets/images/platypus-head.svg" class="auth-image" alt="Platypus">
 
-        </section>
+                    <p>An international travel app that is a one-stop source for important information and steps you
+                        need
+                        to
+                        travel abroad. This app will let you input a destination and immediately get information on
+                        type of
+                        visa needed, immunizations needed, and other requirements for travel. Registered users can then
+                        save
+                        this information as a checklist and add custom tasks.</p>
+
+                    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+                            title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                            title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+                </section>
+
+            </div>
+
+            <div class="ui link cards relative">
+                <div class="card">
+                    <div class="image">
+                        <img src="/assets/images/AbigailJ.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Abigail Jackson</div>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="description">
+                            Abigail is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2013
+                        </span>
+                        <span>
+                            <i class="user icon"></i>
+                            75 Friends
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="/images/avatar2/large/molly.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Patrick Kent</div>
+                        <div class="meta">
+                            <span class="date">Coworker</span>
+                        </div>
+                        <div class="description">
+                            Patrick is a personal assistant living in Paris.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2011
+                        </span>
+                        <span>
+                            <i class="user icon"></i>
+                            35 Friends
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="assets/images/LuisC.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Luis Cartagena</div>
+                        <div class="meta">
+                            <a>Coworker</a>
+                        </div>
+                        <div class="description">
+                            Luis is a copywriter working in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2014
+                        </span>
+                        <span>
+                            <i class="user icon"></i>
+                            151 Friends
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="/images/avatar2/large/elyse.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Rich Coleman</div>
+                        <div class="meta">
+                            <a>Coworker</a>
+                        </div>
+                        <div class="description">
+                            Rich is a copywriter working in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2014
+                        </span>
+                        <span>
+                            <i class="user icon"></i>
+                            151 Friends
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        <div id="main-container" class="container">
+            <section class="main-section">
+                <h2 class="text-center" id="title">Contact</h2>
+
+                <form id="contact-form">
+                    <ul>
+                        <li>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Maritza Lopez" required="required">
+                        </li>
+                        <li>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+                        </li>
+                        <li>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required="required"></textarea>
+                        </li>
+                    </ul>
+                    <button class="ui button" id="btn">Submit</button>
+                </form>
+
+            </section>
+
+        </div>
 
     </div>
 
-
-    <div class="ui link cards">
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/matthew.png">
-            </div>
-            <div class="content">
-                <div class="header">Matt Giampietro</div>
-                <div class="meta">
-                    <a>Friends</a>
-                </div>
-                <div class="description">
-                    Matthew is an interior designer living in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2013
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    75 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/molly.png">
-            </div>
-            <div class="content">
-                <div class="header">Molly</div>
-                <div class="meta">
-                    <span class="date">Coworker</span>
-                </div>
-                <div class="description">
-                    Molly is a personal assistant living in Paris.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2011
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    35 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <div id="main-container" class="container">
-        <section class="main-section">
-            <h2 class="text-center" id="title">Contact</h2>
-
-            <form id="contact-form">
-                <ul>
-                    <li>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Maritza Lopez" required="required">
-                    </li>
-                    <li>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
-                    </li>
-                    <li>
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required="required"></textarea>
-                    </li>
-                </ul>
-                <button class="ui button" id="btn">Submit</button>
-            </form>
-
-        </section>
 
     </div>
 
