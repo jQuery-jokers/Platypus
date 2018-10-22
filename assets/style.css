@@ -1,104 +1,182 @@
 header {
-    padding: 1em 3em 1em 3em;
-    background-color: #d7f4fa;
-    margin-bottom: 2em;
-  }
-  
-  #sign-up-btn {
-      font-family: "Baloo", cursive;
-  }
-  
-  #user-sign-up-title {
-    padding: 1em;
-    background-color: #fecc67;
-    color: white;
-  }
-  
-  #pop-up-label {
-      padding: .5em;
-  }
-  #popup-input {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    padding: 1em;
-    font-size: 1em;
-    border-color: (34, 36, 38, 0.15);
-    border-radius: .5em;
-  }
-  
-  #title {
-    color: #fecc67;
-    font-family: "Baloo", cursive;
-  }
-  
-  .container {
-    width: 80%;
-    margin: auto;
-  }
-  
-  h1,
-  .form {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 5em;
-    margin-bottom: 0.7em;
-  }
-  
-  #topDivider {
-    border-top-color: #ffaa39;
-  }
-  
-  #searchForm {
-    width: 60%;
-    margin: auto;
-  }
-  
-  #labelquestion {
-    padding: auto;
-    font-size: 1.1em;
-    margin-bottom: 1em;
-  }
-  
-  #btn {
-    margin-top: 1.85em;
-    height: 2.7em;
-    background-color: #fecc67;
-    font-family: "Baloo", cursive;
-  }
-  
-  .accordion {
-    margin: auto;
-    font-size: 2em;
-  }
-  
-  .divider {
-    padding: 1em;
-  }
-  
-  .form {
-    margin-bottom: 3em;
-  }
-  
-  #platypus {
-    float: right;
-  }
-  
-  footer {
-    padding: 10px 0;
+  padding: 1em 3em 1em 3em;
+  background-color: #d7f4fa;
+  margin-bottom: 2em;
+}
+
+#sign-up-btn {
+  font-family: "Baloo", cursive;
+}
+
+#user-sign-up-title {
+  padding: 1em;
+  background-color: #fecc67;
+  color: white;
+}
+
+#pop-up-label {
+  padding: 0.5em;
+}
+#popup-input {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  padding: 1em;
+  font-size: 1em;
+  border-color: (34, 36, 38, 0.15);
+  border-radius: 0.5em;
+}
+
+#title {
+  color: #fecc67;
+  font-family: "Baloo", cursive;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+h1,
+.form {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 0.7em;
+}
+
+#topDivider {
+  border-top-color: #ffaa39;
+}
+
+#searchForm {
+  width: 60%;
+  margin: auto;
+}
+
+#labelquestion {
+  padding: auto;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+#btn {
+  margin-top: 1.85em;
+  height: 2.7em;
+  background-color: #fecc67;
+  font-family: "Baloo", cursive;
+}
+
+.accordion {
+  margin: auto;
+  font-size: 2em;
+}
+
+.divider {
+  padding: 1em;
+}
+
+.form {
+  margin-bottom: 3em;
+}
+
+#platypus {
+  float: right;
+}
+
+footer {
+  padding: 10px 0;
+  clear: both;
+  font-size: 16px;
+  color: grey;
+  /* color: #ccc; */
+  text-align: center;
+  /* border-top: 6px solid #d7f4fa; */
+  height: 50px;
+  position: relative;
+}
+
+#bottomDivider {
+  border-top: 0px;
+  border-bottom-color: #ffaa39;
+  margin-top: 40em;
+}
+
+/* travel-list page */
+#addButton {
+  margin-left: 12em;
+}
+
+/* About page */
+
+#contact-form ul {
+  margin-bottom: 20px;
+}
+
+#contact-form li {
+  margin-bottom: 10px;
+}
+
+#contact,
+#name,
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+}
+
+#name,
+input[type="email"],
+textarea {
+  height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+textarea {
+  height: 200px;
+}
+
+.auth-image {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-right: 25px;
+}
+
+/* main */
+
+.clearfix {
+    float: none;
     clear: both;
-    font-size: 16px;
-    color: grey;
-    /* color: #ccc; */
-    text-align: center;
-    /* border-top: 6px solid #d7f4fa; */
-    height: 50px;
-    position: relative;
-  }
-  
-  #bottomDivider {
-    border-top: 0px;
-    border-bottom-color: #ffaa39;
-    margin-top: 40em;
-  }
-  
+}
+
+.main-section {
+  /* float: left; */
+  width: 100%;
+  max-width: 960px;
+  /* padding: 30px; */
+  margin: 0 0 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* cards */
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.relative {
+  position: relative;
+  left: 40em;
+  /* float:right; */
+}
+
+@media only screen and (min-width: 1200px) {
+    .cards {
+        width: 70%;
+    }
+}

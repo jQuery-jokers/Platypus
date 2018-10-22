@@ -30,11 +30,11 @@
                         <form class="ui big form" id="sign-up-popup">
                             <h2 class="ui dividing header" id="user-sign-up-title">User Sign-Up</h2>
                             <div class="field">
-                                <label id="pop-up-label">User Name</label>
+                                <label id="pop-up-label">Create User Name</label>
                                 <input id="popup-input" type="text " name="username" placeholder="jokers1234">
                             </div>
                             <div class="field ">
-                                <label id="pop-up-label">Password</label>
+                                <label id="pop-up-label">Create Password</label>
                                 <input id="popup-input" type="text " name="password" placeholder="honeybooboo">
                             </div>
                             <div class="field ">
@@ -49,7 +49,7 @@
             </div>
             </button>
             <a class="ui item ">Login</a>
-            <a class="ui item ">About</a>
+            <a class="ui item " href="about.html">About</a>
         </div>
 
         </div>
@@ -100,7 +100,8 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
+                    you're
                     traveling to have vaccination requirements?
                     <br><br> Find out by using our search function above.</p>
             </div>
@@ -111,6 +112,14 @@
             <div class="content">
                 <p id="lengthofstay">How many days can I visit a country for?
                     <br><br> Use our search function above and find out!</p>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Currency
+            </div>
+            <div class="content">
+                <p id="currency">How much money may I travel with before declaring to customs? What will my budget be?
+                    <br><br> Use our search function above to plan!</p>
             </div>
         </div>
         <img src="assets/images/platypus-head.svg" id="platypus">
@@ -154,33 +163,32 @@
             });
         });
 
-        // $("#btn").click(function () {
-            $('#searchForm')
-                .form({
-                    on: 'blur',
-                    inline: true,
-                    fields: {
-                        citizenship: {
-                            identifier: 'citizenship',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please enter the country in which you have citizenship',
-                                }
-                            ]
-                        },
-                        destination: {
-                            identifier: 'destination',
-                            rules: [
-                                {
-                                    type: 'empty',
-                                    prompt: 'Please enter your destination'
-                                }
-                            ]
-                        },
-                    }
-                });
-        // })
+
+        $('#searchForm')
+            .form({
+                on: 'blur',
+                inline: true,
+                fields: {
+                    citizenship: {
+                        identifier: 'citizenship',
+                        rules: [
+                            {
+                                type: 'empty',
+                                prompt: 'Please enter the country in which you have citizenship',
+                            }
+                        ]
+                    },
+                    destination: {
+                        identifier: 'destination',
+                        rules: [
+                            {
+                                type: 'empty',
+                                prompt: 'Please enter your destination'
+                            }
+                        ]
+                    },
+                }
+            });
 
     </script>
 
