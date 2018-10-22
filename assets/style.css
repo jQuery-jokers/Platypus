@@ -102,12 +102,10 @@ footer {
   margin-top: 40em;
 }
 
-
 /* travel-list page */
 #addButton {
-    margin-left: 12em;
+  margin-left: 12em;
 }
-
 
 /* About page */
 
@@ -127,7 +125,6 @@ textarea {
   width: 100%;
 }
 
-
 #name,
 input[type="email"],
 textarea {
@@ -142,33 +139,44 @@ textarea {
 }
 
 .auth-image {
-    float: left;
-    width: 200px;
-    height: auto;
-    margin-right: 25px;
-  }
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-right: 25px;
+}
 
- /* main */
-  
- #main-container {
+/* main */
 
-  }
-  
-  .main-section {
-    /* float: left; */
-    width: 100%;
-    max-width: 960px;
-    padding: 30px;
-    margin: 0 0 40px;
-    background: #fff;
-    border: 1px solid #ddd;
-  }
+.clearfix {
+    float: none;
+    clear: both;
+}
 
+.main-section {
+  /* float: left; */
+  width: 100%;
+  max-width: 960px;
+  /* padding: 30px; */
+  margin: 0 0 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
 
 /* cards */
 
+.card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 div.relative {
-    position: relative;
-    left: 40em; 
-    /* float:right; */
+  position: relative;
+  left: 40em;
+  /* float:right; */
+}
+
+@media only screen and (min-width: 1200px) {
+    .cards {
+        width: 70%;
+    }
 }
