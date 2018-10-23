@@ -9,32 +9,34 @@ var countries = {
   }
 };
 
-
-
-$("#btn").click(function (e) {
+$("#btn").click(function(e) {
   e.preventDefault();
-  var destination = $("#usercountry").val().trim();
+  var destination = $("#usercountry")
+    .val()
+    .trim();
 
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://api.unsplash.com/search/photos/?client_id=5f85c22574885841bbfba356797e761e3eb053f86b7709753507c26d3549b150&query=" + destination + "&limit=10",
-  "method": "GET",
-};
+  var settings = {
+    async: true,
+    crossDomain: true,
+    url:
+      "https://api.unsplash.com/search/photos/?client_id=5f85c22574885841bbfba356797e761e3eb053f86b7709753507c26d3549b150&query=" +
+      destination +
+      "&limit=10",
+    method: "GET"
+  };
 
-  $.ajax(settings).done(function (response) {
-      console.log(response);
-      var inspirationDiv = $("#inspiration");
-      
-      for (var i = 0; i < response.results.length; i++){
-        var url = response.results[i].urls.small;
-        console.log(url);
-        
-        var photo = $("<img>").attr("src", url);
-        inspirationDiv.append(photo);
-      }
-    
-  })
+  $.ajax(settings).done(function(response) {
+    console.log(response);
+    var inspirationDiv = $("#inspiration");
+
+    for (var i = 0; i < response.results.length; i++) {
+      var url = response.results[i].urls.small;
+      console.log(url);
+
+      var photo = $("<img>").attr("src", url);
+      inspirationDiv.append(photo);
+    }
+  });
 });
 
 var currencyCountryURL =
@@ -67,7 +69,7 @@ $("#btn").click(function(e) {
       var destinationCurrency = response.results[destinationID].currencyId;
       var currencyDiv = $("#currency");
       currencyDiv.html(
-        "<form class='ui huge form'> <div class='field'><label>What's your budget? </label> <input id='money' type='text'> <button class='ui button' id='moneybutton' data-value=''>Convert</button></div></form>"
+        "<form class='ui huge form'> <div class='field'><label>What's your budget? </label> <input id='money' type='text' name='budget'> <button class='ui button' id='moneybutton' data-value=''>Convert</button></div></form>"
       );
       var moneyButton = $("#moneybutton");
       $(moneyButton).click(function(res) {
@@ -179,5 +181,25 @@ $("#btn").click(function(e) {
       newCurrencyP.html("Declaration thresholds: " + response.currency.arrival);
       currencyDiv.prepend(newCurrencyP);
     });
+  });
+
+  $("#money").form({
+    on: "blur",
+    inline: true,
+    fields: {
+      budget: {
+        identifier: "budget",
+        rules: [
+          {
+            type: "empty",
+            prompt: "Please enter a whole number for your budget"
+          },
+          {
+            type: "number",
+            prompt: "A number, ya goof"
+          }
+        ]
+      }
+    }
   });
 });

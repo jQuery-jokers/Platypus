@@ -64,7 +64,7 @@
                 <div class="field">
                     <label id="labelquestion">Citizenship</label>
                     <div class="ui icon input">
-                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Origin">
+                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Citizenship">
                         <i class="globe icon"></i>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                                 {
                                     type: 'regExp',
                                     value: countryListExpression,
-                                    prompt: 'nah man'
+                                    prompt: 'Please enter the country in which you have citizenship'
                                 }
                             ]
                         },
@@ -193,7 +193,7 @@
                                 {
                                     type: 'regExp',
                                     value: countryListExpression,
-                                    prompt: 'nah man'
+                                    prompt: 'Please enter your destination'
                                 }
                             ]
                         },
@@ -225,6 +225,29 @@
                 closable: true
             });
         });
+
+
+
+        //  $('#money')
+        //         .form({
+        //             on: 'blur',
+        //             inline: true,
+        //             fields: {
+        //                 budget: {
+        //                     identifier: 'budget',
+        //                     rules: [
+        //                         {
+        //                             type: 'empty',
+        //                             prompt: 'Please enter a whole number for your budget',
+        //                         },
+        //                         {
+        //                             type: 'number',
+        //                             prompt: 'A number, ya goof'
+        //                         }
+        //                     ]
+        //                 }
+        //             }
+        //         });
 
 
     </script>
