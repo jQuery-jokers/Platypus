@@ -45,13 +45,14 @@ $("#btn").click(function(e) {
   $.ajax(settings).done(function(response) {
     console.log(response);
     var inspirationDiv = $("#inspiration");
-    // var slides = $("<")
+   
     for (var i = 0; i < response.results.length; i++) {
-      var url = response.results[i].urls.small;
+      var url = response.results[i].urls.regular;
       console.log(url);
-
-      var photo = $("<img>").attr("src", url);
+      var photo = $("<img id='countryphotos'>").attr("src", url);
+      photo.addClass("ui fluid rounded image");
       inspirationDiv.append(photo);
+      
     }
   });
 
@@ -82,7 +83,7 @@ $("#btn").click(function(e) {
       var destinationCurrency = response.results[destinationID].currencyId;
       var currencyDiv = $("#currency");
       currencyDiv.html(
-        "<form class='ui huge form'> <div class='field'><label>What's your budget? </label> <input id='money' type='number' value=0 name='budget'> <button class='ui button' id='moneybutton' data-value=''>Convert</button></div></form>"
+        "<form class='ui huge form'> <div class='field'><label>What's your budget? </label> <input id='money' type='number' value=0 ``name='budget'> <button class='ui button' id='moneybutton' data-value=''>Convert</button></div></form>"
       );
       var moneyButton = $("#moneybutton");
       $(moneyButton).click(function(res) {

@@ -72,6 +72,10 @@ h1 {
   font-size: 2em;
 }
 
+#countryphotos {
+  margin-top: .5em;
+}
+
 .divider {
   padding: 1em;
 }
