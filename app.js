@@ -9,6 +9,17 @@ var countries = {
   }
 };
 
+var countriesArr = [];
+
+
+$.ajax(countries).done(function (response) {
+    for (var i = 0; i < response.length; i++) {
+        var countryList = response[i].country_name;
+        countriesArr.push(countryList);
+    }
+    
+});
+
 var currencyCountryURL =
   "https://free.currencyconverterapi.com/api/v6/countries";
 
