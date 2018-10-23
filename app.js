@@ -28,6 +28,7 @@ function capitalizeCountryName(string) {
 
 $("#btn").click(function(e) {
   e.preventDefault();
+  $("#inspiration").text("Check out these photos!")
   var destination = $("#usercountry")
     .val()
     .trim();
@@ -81,7 +82,7 @@ $("#btn").click(function(e) {
       var destinationCurrency = response.results[destinationID].currencyId;
       var currencyDiv = $("#currency");
       currencyDiv.html(
-        "<form class='ui huge form'> <div class='field'><label>What's your budget? </label> <input id='money' type='text' name='budget'> <button class='ui button' id='moneybutton' data-value=''>Convert</button></div></form>"
+        "<form class='ui huge form'> <div class='field'><label>What's your budget? </label> <input id='money' type='number' value=0 name='budget'> <button class='ui button' id='moneybutton' data-value=''>Convert</button></div></form>"
       );
       var moneyButton = $("#moneybutton");
       $(moneyButton).click(function(res) {
