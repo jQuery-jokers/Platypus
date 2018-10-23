@@ -80,6 +80,15 @@ h1 {
   margin-bottom: 3em;
 }
 
+#listbtncontainer {
+  text-align: center;
+}
+
+#createlistbtn {
+ margin-top: 1em;
+
+}
+
 #platypus {
   float: right;
 }
@@ -104,7 +113,7 @@ footer {
 
 /* travel-list page */
 #addButton {
-  margin-left: 12em;
+  margin-top: 1em;
 }
 
 /* About page */

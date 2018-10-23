@@ -99,8 +99,7 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
-                    you're
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
                     traveling to have vaccination requirements?
                     <br><br> Find out by using our search function above.</p>
             </div>
@@ -120,9 +119,17 @@
                 <p id="currency">How much money may I travel with before declaring to customs? What will my budget be?
                     <br><br> Use our search function above to plan!</p>
             </div>
+
         </div>
-        <img src="assets/images/platypus-head.svg" id="platypus">
+
     </div>
+    <div id="listbtncontainer" class="ui text container">
+        <a href="travel-list.html">
+            <button id="createlistbtn" class="ui massive button">Create Checklist</button>
+        </a>
+    </div>
+
+    <img src="assets/images/platypus-head.svg" id="platypus">
 
     <div class="container">
         <div class="ui divider" id="bottomDivider"></div>
@@ -138,7 +145,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
     <script src="./app.js"></script>
     <script>
-
+        var countryList = ["Japan", "United States", "philippines", "france", "england"];
+        var countryListExpression = new RegExp(countryList.join('|'));
         $('.ui.accordion').accordion();
 
         // $('#platypus').transition('giggle');
@@ -174,6 +182,11 @@
                             {
                                 type: 'empty',
                                 prompt: 'Please enter the country in which you have citizenship',
+                            },
+                            {
+                                type: 'regExp',
+                                value: countryListExpression,
+                                prompt: 'nah man'
                             }
                         ]
                     },
@@ -183,6 +196,11 @@
                             {
                                 type: 'empty',
                                 prompt: 'Please enter your destination'
+                            },
+                            {
+                                type: 'regExp',
+                                value: countryListExpression,
+                                prompt: 'nah man'
                             }
                         ]
                     },
