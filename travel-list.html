@@ -5,22 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Platypus</title>
+    <title>Travel Checklist</title>
     <!-- Link Semantic CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
     <!-- Link Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
-
-
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-
     <header>
         <div class="ui secondary menu">
             <a href="index.html">
-                <img class="ui circular image" src="../assets/images/platypus-head 64px.png">
+                <img class="ui circular image" src="assets/images/platypus-head 64px.png">
             </a>
             <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
             <!-- <a class="active item">Home</a> -->
@@ -57,76 +54,64 @@
     </header>
 
     <div class="container">
-        <h1 class="text-center" id="title">PLATYPUS</h1>
+        <h2 class="ui center aligned icon header">
+            <i class="map outline icon"></i>
+            Travel Checklist
+        </h2>
 
-        <form class="ui massive form" id="searchForm">
-            <div class="two fields">
-                <div class="field">
-                    <label id="labelquestion">Citizenship</label>
-                    <div class="ui icon input">
-                        <input id="usercitizenship" type="text" value="United States">
-                        <i class="globe icon"></i>
-                    </div>
-                </div>
-                <div class="field">
-                    <label id="labelquestion">Destination</label>
-                    <div class="ui icon input">
-                        <input id="usercountry" type="text" value="Brazil">
-                        <i class="plane icon"></i>
-                    </div>
-                </div>
-                <button class="ui massive button" id="btn">Submit</button>
-            </div>
-        </form>
-        <div class="ui hidden divider" id="hiddenDivider"></div>
-
-    </div>
-
-
-    <div class="container">
-        <div class="ui divider" id="topDivider"></div>
-        <div class="ui styled accordion">
-            <div class="title">
-                <i class="dropdown icon"></i>
-                Visa
-            </div>
-            <div class="content">
-                <p class="transition hidden" id="visa">Where are you traveling to?
-                    <br><br> Learn that country's visa requirements by using our search function above.</p>
-            </div>
-            <div class="title">
-                <i class="dropdown icon"></i>
-                Vaccinations
-            </div>
-            <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
-                    traveling to have vaccination requirements?
-                    <br><br> Find out by using our search function above.</p>
-            </div>
-            <div class="title">
-                <i class="dropdown icon"></i>
-                Length of Stay
-            </div>
-            <div class="content">
-                <p id="lengthofstay">How many days can I visit a country for?
-                    <br><br> Use our search function above and find out!</p>
-            </div>
-            <div class="title">
+        <div class="container">
+            <div class="ui divider" id="topDivider"></div>
+            <div class="ui styled accordion">
+                <div class="title">
                     <i class="dropdown icon"></i>
-                    Currency
+                    Visa
                 </div>
                 <div class="content">
-                    <p id="currency">When do I need to declare money? How much money will I have?
-                        <br><br> Use our search function above and find out!</p>
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label>Add list item</label>
+                    </div>
+                    <br>
+                    <button class="small ui button">Add To-Do</button>
                 </div>
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    Vaccinations
+                </div>
+                <div class="content">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label>Add list item</label>
+                    </div>
+                    <br>
+                    <button class="small ui button">Add To-Do</button>
+                </div>
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    Length of Stay
+                </div>
+                <div class="content">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label>Add list item</label>
+                    </div>
+                    <br>
+                    <button class="small ui button">Add To-Do</button>
+                </div>
+            </div>
         </div>
-        <img src="../assets/images/platypus-head.svg" id="platypus">
     </div>
+    <div id="listbtncontainer" class="ui text container">
+        <a href="travel-list.html">
+            <button id="addButton" class="ui massive button">Add List Category</button>
+        </a>
+    </div>
+
+    <img src="assets/images/platypus-head.svg" id="platypus">
 
     <div class="container">
         <div class="ui divider" id="bottomDivider"></div>
     </div>
-
     <footer>
         <div class="container">
             Copyright &copy; 2018
@@ -135,7 +120,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-    <script src="./testapp.js"></script>
+    <script src="./app.js"></script>
     <script>
 
         $('.ui.accordion').accordion();
@@ -164,6 +149,5 @@
     </script>
 
 </body>
-
 
 </html>
