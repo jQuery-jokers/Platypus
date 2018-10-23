@@ -64,19 +64,14 @@
                 <div class="field">
                     <label id="labelquestion">Citizenship</label>
                     <div class="ui icon input">
-                        <!-- <select class="ui dropdown" name="citizenship">
-                            <option value="">Citizenship</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select> -->
-                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Jamaica">
+                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Origin">
                         <i class="globe icon"></i>
                     </div>
                 </div>
                 <div class="field">
                     <label id="labelquestion">Destination</label>
                     <div class="ui icon input">
-                        <input name="destination" id="usercountry" type="text" placeholder="Brazil">
+                        <input name="destination" id="usercountry" type="text" placeholder="Destination">
                         <i class="plane icon"></i>
                     </div>
                 </div>
@@ -136,11 +131,12 @@
         </div>
 
     </div>
-    <div id="listbtncontainer" class="ui text container">
+    <!-- For V2 -- take user to travel list  -->
+    <!-- <div id="listbtncontainer" class="ui text container">
         <a href="travel-list.html">
             <button id="createlistbtn" class="ui massive button">Create Checklist</button>
         </a>
-    </div>
+    </div> -->
 
     <img src="assets/images/platypus-head.svg" id="platypus">
 
@@ -158,9 +154,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
     <script src="./app.js"></script>
     <script>
+        var countriesArr = [];
+        var countryListExpression;
+        $.ajax(countries).done(function (response) {
+            for (var i = 0; i < response.length; i++) {
+                var countryList = response[i].country_name;
+                countriesArr.push(countryList);
+            }
+            countryListExpression = new RegExp(countriesArr.join('|'));
+
+
+            $('#searchForm')
+                .form({
+                    on: 'blur',
+                    inline: true,
+                    fields: {
+                        citizenship: {
+                            identifier: 'citizenship',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter the country in which you have citizenship',
+                                },
+                                {
+                                    type: 'regExp',
+                                    value: countryListExpression,
+                                    prompt: 'nah man'
+                                }
+                            ]
+                        },
+                        destination: {
+                            identifier: 'destination',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your destination'
+                                },
+                                {
+                                    type: 'regExp',
+                                    value: countryListExpression,
+                                    prompt: 'nah man'
+                                }
+                            ]
+                        },
+                    }
+                });
+        });
         // var countryList = ["Japan", "United States", "philippines", "france", "england"];
         console.log(countriesArr);
-        var countryListExpression = new RegExp(countriesArr.join('|'));
+
         $('.ui.accordion').accordion();
 
         // $('#platypus').transition('giggle');
@@ -184,42 +226,6 @@
             });
         });
 
-
-        $('#searchForm')
-            .form({
-                on: 'blur',
-                inline: true,
-                fields: {
-                    citizenship: {
-                        identifier: 'citizenship',
-                        rules: [
-                            {
-                                type: 'empty',
-                                prompt: 'Please enter the country in which you have citizenship',
-                            },
-                            {
-                                type: 'regExp',
-                                value: countryListExpression,
-                                prompt: 'nah man'
-                            }
-                        ]
-                    },
-                    destination: {
-                        identifier: 'destination',
-                        rules: [
-                            {
-                                type: 'empty',
-                                prompt: 'Please enter your destination'
-                            },
-                            {
-                                type: 'regExp',
-                                value: countryListExpression,
-                                prompt: 'nah man'
-                            }
-                        ]
-                    },
-                }
-            });
 
     </script>
 

@@ -27,9 +27,6 @@ function capitalizeCountryName(string) {
 
 $("#btn").click(function (e) {
   e.preventDefault();
-  var destination = $("#usercountry").val().trim();
-  destination = capitalizeCountryName(destination);
-  console.log(destination)
   var settings = {
     "async": true,
     "crossDomain": true,
