@@ -43,13 +43,12 @@
                             <div class="ui large submit button">Create</div>
                         </form>
                     </div>Sign-Up
+                    </button>
             </div>
-            </button>
             <a class="ui item ">Login</a>
             <a class="ui item " href="about.html">About</a>
         </div>
 
-        </div>
 
     </header>
 
@@ -59,35 +58,51 @@
         <div class="sixteen wide column">
             <div id="main-container" class="container">
                 <section class="main-section">
-                    <h2 class="text-center" id="title">About Platypus</h2>
 
-                    <img src="assets/images/platypus-head.svg" class="auth-image" alt="Platypus">
+                    <div class="ui doubling stackable grid container">
+                        <div class="five wide column" id="AboutHeader">
+                            <h2 class="text-center" id="AboutTitle">About Platypus</h2>
 
-                    <p>Platypus is an international travel app that is a one-stop source for important information and
-                        steps you
-                        need
-                        to
-                        travel abroad. This app will let you input a destination and immediately get information on
-                        type of
-                        visa needed, immunizations needed, and other requirements for travel. Registered users can then
-                        save
-                        this information as a checklist and add custom tasks.</p>
+                            <div class="image">
+                                <img src="assets/images/platypus-head.svg" class="auth-image" alt="Platypus">
+                            </div>
+                        </div>
 
-                    <p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-                            title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-                            title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+                        <div class="eleven wide column" id="about-div">
+                            <p id="aboutP">Platypus is an international travel app that is a one-stop source for
+                                important
+                                information and
+                                steps you
+                                need
+                                to
+                                travel abroad. This app will let you input a destination and immediately get
+                                information on
+                                type of
+                                visa needed, immunizations needed, and other requirements for travel. Registered users
+                                can
+                                then
+                                save
+                                this information as a checklist and add custom tasks.</p>
 
-                            <div class="clearfix"></div>
+                            <p id="aboutPcredits">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+                                from
+                                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed
+                                by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                                    target="_blank">CC 3.0 BY</a></p>
+                        </div>
+
+                        <!-- <div class="clearfix"></div> -->
+                    </div>
                 </section>
 
             </div>
 
 
             <!-- <div class="row"> -->
-            <div class="ui link cards four column row">
-                <div class="card column">
+            <div class="ui link cards row">
+                <div class="card">
                     <div class="image">
-                        <img src="assets/images/AbigailJ.png">
+                        <img src="assets/images/AbigailJ.png" id="AJimg">
                     </div>
                     <div class="content">
                         <div class="header">Abigail Jackson</div>
@@ -108,9 +123,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="card column">
+                <div class="card">
                     <div class="image">
-                        <img src="">
+                        <img src="assets/images/PatrickK.png" id="PKimg">
                     </div>
                     <div class="content">
                         <div class="header">Patrick Kent</div>
@@ -131,9 +146,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="card column">
+                <div class="card">
                     <div class="image">
-                        <img src="assets/images/LuisC.png">
+                        <img src="assets/images/LuisC.png" id="LCimg">
                     </div>
                     <div class="content">
                         <div class="header">Luis Cartagena</div>
@@ -154,9 +169,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="card column">
+                <div class="card">
                     <div class="image">
-                        <img src="">
+                        <img src="assets/images/RichC.png" id="RCimg">
                     </div>
                     <div class="content">
                         <div class="header">Rich Coleman</div>
@@ -184,13 +199,13 @@
 
             <div id="main-container" class="container">
                 <section class="main-section">
-                    <h2 class="text-center" id="title">Contact</h2>
+                    <h2 class="text-center" id="AboutContactTitle">Contact</h2>
 
                     <form id="contact-form">
                         <ul>
                             <li>
                                 <label for="name" id="contact">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Maritza Lopez" required="required">
+                                <input type="text" id="name" name="name" placeholder="Full Name" required="required">
                             </li>
                             <li>
                                 <label for="email" id="contact">Email</label>
@@ -201,7 +216,7 @@
                                 <textarea id="message" name="message" required="required"></textarea>
                             </li>
                         </ul>
-                        <button class="ui button" id="btn">Submit</button>
+                        <button class="ui button" id="Aboutbtn">Submit</button>
                     </form>
 
                 </section>
