@@ -9,16 +9,7 @@ var countries = {
   }
 };
 
-var countriesArr = [];
 
-
-$.ajax(countries).done(function (response) {
-    for (var i = 0; i < response.length; i++) {
-        var countryList = response[i].country_name;
-        countriesArr.push(countryList);
-    }
-    
-});
 
 $("#btn").click(function (e) {
   e.preventDefault();
@@ -27,21 +18,22 @@ $("#btn").click(function (e) {
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://api.unsplash.com/photos/?client_id=5f85c22574885841bbfba356797e761e3eb053f86b7709753507c26d3549b150&query=" + destination,
+  "url": "https://api.unsplash.com/search/photos/?client_id=5f85c22574885841bbfba356797e761e3eb053f86b7709753507c26d3549b150&query=" + destination + "&limit=10",
   "method": "GET",
-  "headers": {
-    "cache-control": "no-cache",
-    "Postman-Token": "efe1f4c3-dd4c-457b-8d8a-82c852603e69"
-  }
 };
 
   $.ajax(settings).done(function (response) {
       console.log(response);
-
-      var slides = $("<")
-
       var inspirationDiv = $("#inspiration");
-      inspirationDiv.append(response[0].urls.small);
+      
+      for (var i = 0; i < response.results.length; i++){
+        var url = response.results[i].urls.small;
+        console.log(url);
+        
+        var photo = $("<img>").attr("src", url);
+        inspirationDiv.append(photo);
+      }
+    
   })
 });
 
