@@ -141,10 +141,11 @@ $("#btn").click(function(e) {
       //Write length of stay info to length div
       var lengthDiv = $("#lengthofstay");
       var allowedStay = response.visa[0].allowed_stay;
-      if (!allowedStay) {
-        lengthDiv.text("No special requirements!");
+      if (allowedStay) {
+        lengthDiv.text("You can stay for " + allowedStay);
       }
-      lengthDiv.text("You can stay for " + allowedStay);
+       lengthDiv.text("No special requirements!");
+      
 
       var currencyDiv = $("#currency");
       var newCurrencyP = $("<p>");
