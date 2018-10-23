@@ -20,6 +20,31 @@ $.ajax(countries).done(function (response) {
     
 });
 
+$("#btn").click(function (e) {
+  e.preventDefault();
+  var destination = $("#usercountry").val().trim();
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.unsplash.com/photos/?client_id=5f85c22574885841bbfba356797e761e3eb053f86b7709753507c26d3549b150&query=" + destination,
+  "method": "GET",
+  "headers": {
+    "cache-control": "no-cache",
+    "Postman-Token": "efe1f4c3-dd4c-457b-8d8a-82c852603e69"
+  }
+};
+
+  $.ajax(settings).done(function (response) {
+      console.log(response);
+
+      var slides = $("<")
+
+      var inspirationDiv = $("#inspiration");
+      inspirationDiv.append(response[0].urls.small);
+  })
+});
+
 var currencyCountryURL =
   "https://free.currencyconverterapi.com/api/v6/countries";
 
