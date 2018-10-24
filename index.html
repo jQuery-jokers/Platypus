@@ -64,19 +64,18 @@
                 <div class="field">
                     <label id="labelquestion">Citizenship</label>
                     <div class="ui icon input">
-                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Jamaica">
+                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Citizenship">
                         <i class="globe icon"></i>
                     </div>
                 </div>
                 <div class="field">
                     <label id="labelquestion">Destination</label>
                     <div class="ui icon input">
-                        <input name="destination" id="usercountry" type="text" placeholder="Brazil">
+                        <input name="destination" id="usercountry" type="text" placeholder="Destination">
                         <i class="plane icon"></i>
                     </div>
                 </div>
                 <button class="ui massive button" id="btn">Submit</button>
-                <!-- <div class="ui error message"></div> -->
             </div>
         </form>
         <div class="ui hidden divider" id="hiddenDivider"></div>
@@ -100,8 +99,7 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
-                    you're
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
                     traveling to have vaccination requirements?
                     <br><br> Find out by using our search function above.</p>
             </div>
@@ -118,12 +116,28 @@
                 Currency
             </div>
             <div class="content">
-                <p id="currency">How much money may I travel with before declaring to customs? What will my budget be?
+                <p id="currency">How much money may I travel with before declaring to customs? What will my budget be?``
                     <br><br> Use our search function above to plan!</p>
             </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Inspiration
+            </div>
+            <div class="content">
+                <p class="transition hidden" id="inspiration">Where are you traveling to?
+                <br><br> Get photo inpsiration by using our search function above.</p>
+            </div>
+
         </div>
-        <img src="assets/images/platypus-head.svg" id="platypus">
     </div>
+    <!-- For V2 -- take user to travel list  -->
+    <!-- <div id="listbtncontainer" class="ui text container">
+        <a href="travel-list.html">
+            <button id="createlistbtn" class="ui massive button">Create Checklist</button>
+        </a>
+    </div> -->
+
+    <img src="assets/images/platypus-head.svg" id="platypus">
 
     <div class="container">
         <div class="ui divider" id="bottomDivider"></div>
@@ -139,10 +153,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
     <script src="./app.js"></script>
     <script>
+        var countriesArr = [];
+        var countryListExpression;
+        $.ajax(countries).done(function (response) {
+            for (var i = 0; i < response.length; i++) {
+                var countryList = response[i].country_name;
+                countriesArr.push(countryList);
+            }
+            countryListExpression = new RegExp(countriesArr.join('|'));
 
+
+            $('#searchForm')
+                .form({
+                    on: 'blur',
+                    inline: true,
+                    fields: {
+                        citizenship: {
+                            identifier: 'citizenship',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter the country in which you have citizenship',
+                                },
+                                {
+                                    type: 'regExp',
+                                    value: countryListExpression,
+                                    prompt: 'Please enter the country in which you have citizenship'
+                                }
+                            ]
+                        },
+                        destination: {
+                            identifier: 'destination',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your destination'
+                                },
+                                {
+                                    type: 'regExp',
+                                    value: countryListExpression,
+                                    prompt: 'Please enter your destination'
+                                }
+                            ]
+                        },
+                    }
+                });
+        });
+        
         $('.ui.accordion').accordion();
-
-        // $('#platypus').transition('giggle');
 
         $('#platypus')
             .transition({
@@ -163,32 +221,27 @@
             });
         });
 
+        //  $('#money')
+        //         .form({
+        //             on: 'blur',
+        //             inline: true,
+        //             fields: {
+        //                 budget: {
+        //                     identifier: 'budget',
+        //                     rules: [
+        //                         {
+        //                             type: 'empty',
+        //                             prompt: 'Please enter a whole number for your budget',
+        //                         },
+        //                         {
+        //                             type: 'number',
+        //                             prompt: 'A number, ya goof'
+        //                         }
+        //                     ]
+        //                 }
+        //             }
+        //         });
 
-        $('#searchForm')
-            .form({
-                on: 'blur',
-                inline: true,
-                fields: {
-                    citizenship: {
-                        identifier: 'citizenship',
-                        rules: [
-                            {
-                                type: 'empty',
-                                prompt: 'Please enter the country in which you have citizenship',
-                            }
-                        ]
-                    },
-                    destination: {
-                        identifier: 'destination',
-                        rules: [
-                            {
-                                type: 'empty',
-                                prompt: 'Please enter your destination'
-                            }
-                        ]
-                    },
-                }
-            });
 
     </script>
 
