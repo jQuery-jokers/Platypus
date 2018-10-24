@@ -14,13 +14,13 @@
 </head>
 
 <body>
+
+    <!-- NavBar -->
     <header>
         <div class="ui secondary menu">
             <a href="index.html">
                 <img class="ui circular image" src="assets/images/platypus-head 64px.png">
             </a>
-            <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
-            <!-- <a class="active item">Home</a> -->
             <div class="right menu">
                 <button class="ui inverted secondary button" id="sign-up-btn">
                     <div class="ui modal form" id="popup-form">
@@ -53,12 +53,14 @@
 
     </header>
 
+    <!-- Title -->
     <div class="container">
         <h2 class="ui center aligned icon header">
             <i class="map outline icon"></i>
             Travel Checklist
         </h2>
 
+        <!-- Accordion and Checklist -->
         <div class="container">
             <div class="ui divider" id="topDivider"></div>
             <div class="ui styled accordion">
@@ -107,8 +109,10 @@
         </a>
     </div>
 
+    <!-- Playtpus Image -->
     <img src="assets/images/platypus-head.svg" id="platypus">
 
+    <!-- Footer -->
     <div class="container">
         <div class="ui divider" id="bottomDivider"></div>
     </div>
@@ -123,16 +127,14 @@
     <script src="./app.js"></script>
     <script>
 
+        // Semantic functions: accordion, transition, modal
         $('.ui.accordion').accordion();
-
-        // $('#platypus').transition('giggle');
 
         $('#platypus')
             .transition({
                 animation: 'jiggle',
                 duration: '2s',
                 onComplete: function () {
-                    // alert('done');
                 }
             })
             ;

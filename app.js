@@ -130,7 +130,7 @@ $("#btn").click(function(e) {
       console.log(response);
       var newP = $("<p>");
 
-      //Write Visa info to visa div
+      // Write Visa info to visa div
       var visaDiv = $("#visa");
       newP.html(
         response.visa[0].textual.text[0] +
@@ -147,7 +147,7 @@ $("#btn").click(function(e) {
       }
       // visaDiv.text(response.visa[0].type)
 
-      //Write vaccination info to vax div
+      // Write vaccination info to vax div
       var vaxDiv = $("#vaccination");
       var riskDiseaseList = [];
       var recDiseaseList = [];
@@ -187,7 +187,7 @@ $("#btn").click(function(e) {
         }
       }
 
-      //Write length of stay info to length div
+      // Write length of stay info to length div
       var lengthDiv = $("#lengthofstay");
       var allowedStay = response.visa[0].allowed_stay;
       if (allowedStay) {

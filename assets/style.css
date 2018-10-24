@@ -74,7 +74,7 @@ h1 {
 }
 
 #countryphotos {
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 .divider {
@@ -90,8 +90,7 @@ h1 {
 }
 
 #createlistbtn {
- margin-top: 1em;
-
+  margin-top: 1em;
 }
 
 #platypus {
@@ -137,14 +136,12 @@ footer {
 
 #about-div {
   padding: 10px 0px 10px 45px;
-
 }
 
 @media only screen and (max-width: 767px) {
-#about-div > * {
-  padding: 0px 0px 0px 25px;
-}
-
+  #about-div > * {
+    padding: 0px 0px 0px 25px;
+  }
 }
 
 #aboutP {
@@ -197,7 +194,6 @@ footer {
 .card {
   width: 210px !important;
 }
-
 
 /* about.html contact section */
 #AboutContactTitle {
