@@ -1,3 +1,4 @@
+/* index.html + general */
 header {
   padding: 1em 3em 1em 3em;
   background-color: #d7f4fa;
@@ -102,9 +103,7 @@ footer {
   clear: both;
   font-size: 16px;
   color: grey;
-  /* color: #ccc; */
   text-align: center;
-  /* border-top: 6px solid #d7f4fa; */
   height: 50px;
   position: relative;
 }
@@ -115,13 +114,12 @@ footer {
   margin-top: 40em;
 }
 
-/* travel-list page */
+/* travel-list.html */
 #addButton {
   margin-top: 1em;
 }
 
-/* About Page: main */
-
+/* about.html main section */
 #AboutTitle {
   color: #fecc67;
   font-family: "Baloo", cursive;
@@ -158,7 +156,6 @@ footer {
 }
 
 .auth-image {
-  /* float: left; */
   width: 170px;
   text-align: center;
   height: auto;
@@ -172,7 +169,6 @@ footer {
 }
 
 .main-section {
-  /* float: left; */
   width: 100%;
   max-width: 960px;
   padding: 30px;
@@ -181,8 +177,7 @@ footer {
   border: 1px solid #ddd;
 }
 
-/* About Page: cards */
-
+/* about.html cards */
 .card {
   margin-left: auto;
   margin-right: auto;
@@ -203,14 +198,8 @@ footer {
   width: 210px !important;
 }
 
-@media only screen and (min-width: 1200px) {
-  .cards {
-    /* width: 70%; */
-  }
-}
 
-/* About Contact */
-
+/* about.html contact section */
 #AboutContactTitle {
   color: #fecc67;
   font-family: "Baloo", cursive;
@@ -254,7 +243,7 @@ textarea {
   font-family: "Baloo", cursive;
 }
 
-/* About Footer */
+/* about.html footer */
 #about-bottom-divider {
   border-top: 0px;
   border-bottom-color: #ffaa39;
