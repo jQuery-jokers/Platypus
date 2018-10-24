@@ -207,23 +207,4 @@ $("#btn").click(function(e) {
     });
   });
 
-  // $("#money").form({
-  //   on: "blur",
-  //   inline: true,
-  //   fields: {
-  //     budget: {
-  //       identifier: "budget",
-  //       rules: [
-  //         {
-  //           type: "empty",
-  //           prompt: "Please enter a whole number for your budget"
-  //         },
-  //         {
-  //           type: "number",
-  //           prompt: "A number, ya goof"
-  //         }
-  //       ]
-  //     }
-  //   }
-  // });
 });
