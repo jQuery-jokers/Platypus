@@ -17,13 +17,12 @@
 
 <body>
 
+    <!-- NavBar -->
     <header>
         <div class="ui secondary menu">
             <a href="index.html">
                 <img class="ui circular image" src="assets/images/platypus-head 64px.png">
             </a>
-            <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
-            <!-- <a class="active item">Home</a> -->
             <div class="right menu">
                 <button class="ui inverted secondary button" id="sign-up-btn">
                     <div class="ui modal form" id="popup-form">
@@ -56,9 +55,11 @@
 
     </header>
 
+    <!-- Title -->
     <div class="container">
         <h1 class="text-center" id="title">PLATYPUS</h1>
 
+        <!-- Input Forms -->
         <form class="ui massive form" id="searchForm">
             <div class="two fields">
                 <div class="field">
@@ -82,7 +83,7 @@
 
     </div>
 
-
+    <!-- Accordion -->
     <div class="container">
         <div class="ui divider" id="topDivider"></div>
         <div class="ui styled accordion">
@@ -99,7 +100,8 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
+                    you're
                     traveling to have vaccination requirements?
                     <br><br> Find out by using our search function above.</p>
             </div>
@@ -116,7 +118,8 @@
                 Currency
             </div>
             <div class="content">
-                <p id="currency">How much money may I travel with before declaring to customs? What will my budget be?
+                <p id="currency">How much money may I travel with before declaring to customs? What will my budget
+                    be?``
                     <br><br> Use our search function above to plan!</p>
             </div>
             <div class="title">
@@ -129,7 +132,6 @@
             </div>
 
         </div>
-
     </div>
     <!-- For V2 -- take user to travel list  -->
     <!-- <div id="listbtncontainer" class="ui text container">
@@ -138,8 +140,11 @@
         </a>
     </div> -->
 
+
+    <!-- Playtpus Image -->
     <img src="assets/images/platypus-head.svg" id="platypus">
 
+    <!-- Footer -->
     <div class="container">
         <div class="ui divider" id="bottomDivider"></div>
     </div>
@@ -200,19 +205,16 @@
                     }
                 });
         });
-        // var countryList = ["Japan", "United States", "philippines", "france", "england"];
-        console.log(countriesArr);
 
+
+        // Semantic functions: accordion, transition, modal
         $('.ui.accordion').accordion();
-
-        // $('#platypus').transition('giggle');
 
         $('#platypus')
             .transition({
                 animation: 'jiggle',
                 duration: '2s',
                 onComplete: function () {
-                    // alert('done');
                 }
             })
             ;
@@ -225,29 +227,6 @@
                 closable: true
             });
         });
-
-
-
-        //  $('#money')
-        //         .form({
-        //             on: 'blur',
-        //             inline: true,
-        //             fields: {
-        //                 budget: {
-        //                     identifier: 'budget',
-        //                     rules: [
-        //                         {
-        //                             type: 'empty',
-        //                             prompt: 'Please enter a whole number for your budget',
-        //                         },
-        //                         {
-        //                             type: 'number',
-        //                             prompt: 'A number, ya goof'
-        //                         }
-        //                     ]
-        //                 }
-        //             }
-        //         });
 
 
     </script>

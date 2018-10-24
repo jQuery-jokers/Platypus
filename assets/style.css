@@ -1,3 +1,4 @@
+/* index.html + general */
 header {
   padding: 1em 3em 1em 3em;
   background-color: #d7f4fa;
@@ -72,6 +73,10 @@ h1 {
   font-size: 2em;
 }
 
+#countryphotos {
+  margin-top: 0.5em;
+}
+
 .divider {
   padding: 1em;
 }
@@ -85,8 +90,7 @@ h1 {
 }
 
 #createlistbtn {
- margin-top: 1em;
-
+  margin-top: 1em;
 }
 
 #platypus {
@@ -98,9 +102,7 @@ footer {
   clear: both;
   font-size: 16px;
   color: grey;
-  /* color: #ccc; */
   text-align: center;
-  /* border-top: 6px solid #d7f4fa; */
   height: 50px;
   position: relative;
 }
@@ -111,12 +113,94 @@ footer {
   margin-top: 40em;
 }
 
-/* travel-list page */
+/* travel-list.html */
 #addButton {
   margin-top: 1em;
 }
 
-/* About page */
+/* about.html main section */
+#AboutTitle {
+  color: #fecc67;
+  font-family: "Baloo", cursive;
+  font-size: 2em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+#AboutHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-div {
+  padding: 10px 0px 10px 45px;
+}
+
+@media only screen and (max-width: 767px) {
+  #about-div > * {
+    padding: 0px 0px 0px 25px;
+  }
+}
+
+#aboutP {
+  font-size: 1.5em;
+}
+
+#aboutPcredits {
+  font-size: 1.5em;
+}
+
+.auth-image {
+  width: 170px;
+  text-align: center;
+  height: auto;
+  margin-right: 25px;
+  margin-left: 2em;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+.main-section {
+  width: 100%;
+  max-width: 960px;
+  padding: 30px;
+  margin: 0 0 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* about.html cards */
+.card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#AJimg,
+#PKimg,
+#LCimg,
+#RCimg {
+  height: 300px;
+}
+
+.cards {
+  justify-content: center;
+}
+
+.card {
+  width: 210px !important;
+}
+
+/* about.html contact section */
+#AboutContactTitle {
+  color: #fecc67;
+  font-family: "Baloo", cursive;
+  margin: 0.3em 0em 1em 1.5em;
+}
 
 #contact-form ul {
   margin-bottom: 20px;
@@ -144,48 +228,19 @@ textarea {
 }
 
 textarea {
-  height: 200px;
+  height: 150px;
 }
 
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-right: 25px;
+#Aboutbtn {
+  margin-bottom: 2em;
+  margin-left: 3em;
+  height: 2.7em;
+  background-color: #fecc67;
+  font-family: "Baloo", cursive;
 }
 
-/* main */
-
-.clearfix {
-    float: none;
-    clear: both;
-}
-
-.main-section {
-  /* float: left; */
-  width: 100%;
-  max-width: 960px;
-  /* padding: 30px; */
-  margin: 0 0 40px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-/* cards */
-
-.card {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.relative {
-  position: relative;
-  left: 40em;
-  /* float:right; */
-}
-
-@media only screen and (min-width: 1200px) {
-    .cards {
-        width: 70%;
-    }
+/* about.html footer */
+#about-bottom-divider {
+  border-top: 0px;
+  border-bottom-color: #ffaa39;
 }
