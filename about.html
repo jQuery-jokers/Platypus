@@ -14,13 +14,12 @@
 
 <body>
 
+    <!-- NavBar -->
     <header>
         <div class="ui secondary menu">
             <a href="index.html">
                 <img class="ui circular image" src="assets/images/platypus-head 64px.png">
             </a>
-            <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
-            <!-- <a class="active item">Home</a> -->
             <div class="right menu">
                 <button class="ui inverted secondary button" id="sign-up-btn">
                     <div class="ui modal form" id="popup-form">
@@ -54,7 +53,7 @@
 
     <div class="ui grid container">
 
-
+        <!-- About Section -->
         <div class="sixteen wide column">
             <div id="main-container" class="container">
                 <section class="main-section">
@@ -84,28 +83,26 @@
                                 save
                                 this information as a checklist and add custom tasks.</p>
 
+                                <!-- Platypus Photo Credits -->
                             <p id="aboutPcredits">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
                                 from
                                 <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed
                                 by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
                                     target="_blank">CC 3.0 BY</a></p>
                         </div>
-
-                        <!-- <div class="clearfix"></div> -->
                     </div>
                 </section>
 
             </div>
 
-
-            <!-- <div class="row"> -->
+            <!-- Team Member Cards Section -->
             <div class="ui link cards row">
                 <div class="card">
                     <div class="image">
                         <img src="assets/images/AbigailJ.png" id="AJimg">
                     </div>
                     <div class="content">
-                        <div class="header">Abigail Jackson</div>
+                        <div class="header"> <a href="https://abigailjxn.github.io/Bootstrap-Portfolio/portfolio.html">Abigail Jackson</a></div>
                         <div class="meta">
                             <a>Coworker</a>
                         </div>
@@ -193,10 +190,10 @@
                     </div>
                 </div>
             </div>
-            <!-- </div> -->
 
             <br><br>
 
+            <!-- Contact Section -->
             <div id="main-container" class="container">
                 <section class="main-section">
                     <h2 class="text-center" id="AboutContactTitle">Contact</h2>
@@ -228,6 +225,7 @@
 
     </div>
 
+    <!-- Footer -->
     <div class="container">
             <div class="ui divider" id="about-bottom-divider"></div>
         </div>
@@ -245,6 +243,7 @@
 
     <script>
 
+        // Sign-up modal
         $(function () {
             $("#sign-up-btn").click(function () {
                 $("#popup-form").modal('show');
