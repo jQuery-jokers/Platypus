@@ -10,31 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
     <!-- Link Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 
 
 </head>
 
 <body>
 
+    <!-- NavBar -->
     <header>
         <div class="ui secondary menu">
             <a href="index.html">
-                <img class="ui circular image" src="../assets/images/platypus-head 64px.png">
+                <img class="ui circular image" src="assets/images/platypus-head 64px.png">
             </a>
-            <!-- <button class="ui inverted secondary button" id="homebutton">Home</button> -->
-            <!-- <a class="active item">Home</a> -->
             <div class="right menu">
                 <button class="ui inverted secondary button" id="sign-up-btn">
                     <div class="ui modal form" id="popup-form">
                         <form class="ui big form" id="sign-up-popup">
                             <h2 class="ui dividing header" id="user-sign-up-title">User Sign-Up</h2>
                             <div class="field">
-                                <label id="pop-up-label">User Name</label>
+                                <label id="pop-up-label">Create User Name</label>
                                 <input id="popup-input" type="text " name="username" placeholder="jokers1234">
                             </div>
                             <div class="field ">
-                                <label id="pop-up-label">Password</label>
+                                <label id="pop-up-label">Create Password</label>
                                 <input id="popup-input" type="text " name="password" placeholder="honeybooboo">
                             </div>
                             <div class="field ">
@@ -49,29 +48,31 @@
             </div>
             </button>
             <a class="ui item ">Login</a>
-            <a class="ui item ">About</a>
+            <a class="ui item " href="about.html">About</a>
         </div>
 
         </div>
 
     </header>
 
+    <!-- Title -->
     <div class="container">
         <h1 class="text-center" id="title">PLATYPUS</h1>
 
+        <!-- Input Forms -->
         <form class="ui massive form" id="searchForm">
             <div class="two fields">
                 <div class="field">
                     <label id="labelquestion">Citizenship</label>
                     <div class="ui icon input">
-                        <input id="usercitizenship" type="text" value="United States">
+                        <input name="citizenship" id="usercitizenship" type="text" placeholder="Citizenship">
                         <i class="globe icon"></i>
                     </div>
                 </div>
                 <div class="field">
                     <label id="labelquestion">Destination</label>
                     <div class="ui icon input">
-                        <input id="usercountry" type="text" value="Brazil">
+                        <input name="destination" id="usercountry" type="text" placeholder="Destination">
                         <i class="plane icon"></i>
                     </div>
                 </div>
@@ -82,7 +83,7 @@
 
     </div>
 
-
+    <!-- Accordion -->
     <div class="container">
         <div class="ui divider" id="topDivider"></div>
         <div class="ui styled accordion">
@@ -99,7 +100,8 @@
                 Vaccinations
             </div>
             <div class="content">
-                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country you're
+                <p class="transition visible" id="vaccination" style="display: block !important;">Does the country
+                    you're
                     traveling to have vaccination requirements?
                     <br><br> Find out by using our search function above.</p>
             </div>
@@ -112,17 +114,37 @@
                     <br><br> Use our search function above and find out!</p>
             </div>
             <div class="title">
-                    <i class="dropdown icon"></i>
-                    Currency
-                </div>
-                <div class="content">
-                    <p id="currency">When do I need to declare money? How much money will I have?
-                        <br><br> Use our search function above and find out!</p>
-                </div>
-        </div>
-        <img src="../assets/images/platypus-head.svg" id="platypus">
-    </div>
+                <i class="dropdown icon"></i>
+                Currency
+            </div>
+            <div class="content">
+                <p id="currency">How much money may I travel with before declaring to customs? What will my budget
+                    be?``
+                    <br><br> Use our search function above to plan!</p>
+            </div>
+            <div class="title">
+                <i class="dropdown icon"></i>
+                Inspiration
+            </div>
+            <div class="content">
+                <p class="transition hidden" id="inspiration">Where are you traveling to?
+                    <br><br> Get photo inpsiration by using our search function above.</p>
+            </div>
 
+        </div>
+    </div>
+    <!-- For V2 -- take user to travel list  -->
+    <!-- <div id="listbtncontainer" class="ui text container">
+        <a href="travel-list.html">
+            <button id="createlistbtn" class="ui massive button">Create Checklist</button>
+        </a>
+    </div> -->
+
+
+    <!-- Playtpus Image -->
+    <img src="assets/images/platypus-head.svg" id="platypus">
+
+    <!-- Footer -->
     <div class="container">
         <div class="ui divider" id="bottomDivider"></div>
     </div>
@@ -135,19 +157,64 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-    <script src="./testapp.js"></script>
+    <script src="./app.js"></script>
     <script>
+        var countriesArr = [];
+        var countryListExpression;
+        $.ajax(countries).done(function (response) {
+            for (var i = 0; i < response.length; i++) {
+                var countryList = response[i].country_name;
+                countriesArr.push(countryList);
+            }
+            countryListExpression = new RegExp(countriesArr.join('|'));
 
+
+            $('#searchForm')
+                .form({
+                    on: 'blur',
+                    inline: true,
+                    fields: {
+                        citizenship: {
+                            identifier: 'citizenship',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter the country in which you have citizenship',
+                                },
+                                {
+                                    type: 'regExp',
+                                    value: countryListExpression,
+                                    prompt: 'Please enter the country in which you have citizenship'
+                                }
+                            ]
+                        },
+                        destination: {
+                            identifier: 'destination',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: 'Please enter your destination'
+                                },
+                                {
+                                    type: 'regExp',
+                                    value: countryListExpression,
+                                    prompt: 'Please enter your destination'
+                                }
+                            ]
+                        },
+                    }
+                });
+        });
+
+
+        // Semantic functions: accordion, transition, modal
         $('.ui.accordion').accordion();
-
-        // $('#platypus').transition('giggle');
 
         $('#platypus')
             .transition({
                 animation: 'jiggle',
                 duration: '2s',
                 onComplete: function () {
-                    // alert('done');
                 }
             })
             ;
@@ -160,6 +227,7 @@
                 closable: true
             });
         });
+
 
     </script>
 
