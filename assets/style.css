@@ -255,3 +255,9 @@ textarea {
   background-color: #fecc67;
   font-family: "Baloo", cursive;
 }
+
+/* About Footer */
+#about-bottom-divider {
+  border-top: 0px;
+  border-bottom-color: #ffaa39;
+}
