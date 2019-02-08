@@ -21,3 +21,5 @@ Users can also convert their budget from their origin country's currency to thei
 - Create users that will auto-generate travel checklists upon country submission.
 - A more robust currency calculator with chosen currencies. 
 
+Deployed at:  https://jquery-jokers.github.io/Platypus/
+
